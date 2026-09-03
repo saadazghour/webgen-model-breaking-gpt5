@@ -1,0 +1,58 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#fafaf8;--text:#1a1a1a;--muted:#6b6b6b;--accent:#111;--line:#e8e8e6;--radius:12px}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:10;background:rgba(250,250,248,0.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.logo{font-weight:700;letter-spacing:0.04em}
+.nav-links{display:flex;gap:20px;font-size:14px}
+.hero{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;padding:40px 20px}
+.hero-content h1{font-size:44px;line-height:0.95;margin-bottom:12px}
+.hero-content p{color:var(--muted);max-width:420px;margin-bottom:18px}
+.btn{background:var(--accent);color:#fff;padding:10px 18px;border-radius:999px;border:0;cursor:pointer;font-size:14px}
+.btn-small{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-size:13px}
+.btn-small.secondary{background:#fff;color:var(--accent);border:1px solid var(--line)}
+.hero-img{height:360px;border-radius:16px;background:linear-gradient(135deg,#d7d7d7,#a8a8a8);}
+
+.gallery-section{max-width:1100px;margin:0 auto;padding:20px}
+.section-head h2{font-size:26px;margin-bottom:12px}
+.toolbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px}
+.filters{display:flex;gap:8px}
+.filter-btn{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:13px}
+.filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hint{font-size:12px;color:var(--muted);margin-bottom:4px}
+.csv-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.csv-status{font-size:12px;min-height:16px;color:#0a7a42}
+.csv-status.error{color:#b42318}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:grab;transition:transform .18s,box-shadow .18s}
+.card:active{cursor:grabbing}
+.card.dragging{opacity:.5;transform:rotate(1deg)}
+.card img{width:100%;height:190px;object-fit:cover;display:block;background:#ddd}
+.card-body{padding:10px 12px}
+.card-body h3{font-size:14px;margin-bottom:4px}
+.card-body p{font-size:12px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.badge{font-size:11px;background:#f0f0ef;padding:3px 8px;border-radius:999px;border:1px solid var(--line)}
+
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.lightbox.open{display:flex}
+.lb-content{max-width:720px;width:100%;text-align:center;color:#fff}
+.lb-content img{max-width:100%;max-height:62vh;border-radius:10px;background:#222}
+.lb-meta{margin-top:10px}
+.lb-meta h3{font-size:18px}
+.lb-meta p{font-size:13px;color:#d0d0d0}
+.lb-close{position:absolute;top:14px;right:18px;font-size:34px;background:0;border:0;color:#fff;cursor:pointer}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:42px;background:0;border:0;color:#fff;cursor:pointer;padding:10px}
+.lb-nav.prev{left:10px}.lb-nav.next{right:10px}
+
+.about{max-width:1100px;margin:0 auto;padding:28px 20px}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+@media(max-width:700px){.about-inner{grid-template-columns:1fr}}
+.about-img{height:220px;border-radius:12px;background:linear-gradient(135deg,#c9c9c9,#8f8f8f)}
+.contact{max-width:600px;margin:0 auto;padding:28px 20px;text-align:center}
+.contact form{display:grid;gap:10px;margin-top:12px}
+.contact input,.contact textarea{padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit}
+.form-msg{font-size:13px;color:#0a7a42;min-height:16px}
+footer{text-align:center;padding:18px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:20px}

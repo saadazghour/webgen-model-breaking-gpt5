@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Rivera — Photography Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">Alex Rivera</div>
+    <nav class="nav-links">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Light. Story. Moment.</h1>
+    <p>Documentary & fine-art photography based in Lisbon. Available for commissions worldwide.</p>
+    <a href="#gallery" class="btn">View Work</a>
+  </div>
+  <div class="hero-img" aria-hidden="true"></div>
+</section>
+
+<section id="gallery" class="gallery-section">
+  <div class="section-head">
+    <h2>Gallery</h2>
+    <div class="toolbar">
+      <div class="filters" role="group" aria-label="Filter by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="urban">Urban</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+      </div>
+      <div class="csv-toolbar">
+        <button id="exportBtn" class="btn-small">Export CSV</button>
+        <label for="importFile" class="btn-small secondary">Import CSV</label>
+        <input type="file" id="importFile" accept=".csv" hidden>
+        <button id="resetOrderBtn" class="btn-small secondary">Reset Order</button>
+      </div>
+    </div>
+    <p class="hint">Tip: Drag and drop images to reorder. Order is saved automatically. Use Export/Import to backup metadata.</p>
+    <p id="csvStatus" class="csv-status" aria-live="polite"></p>
+  </div>
+  <div id="galleryGrid" class="grid"></div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <button id="lbClose" class="lb-close" aria-label="Close">×</button>
+  <button id="lbPrev" class="lb-nav prev" aria-label="Previous">‹</button>
+  <div class="lb-content">
+    <img id="lbImg" src="" alt="">
+    <div class="lb-meta">
+      <h3 id="lbTitle"></h3>
+      <p id="lbCaption"></p>
+      <span id="lbCategory" class="badge"></span>
+    </div>
+  </div>
+  <button id="lbNext" class="lb-nav next" aria-label="Next">›</button>
+</div>
+
+<section id="about" class="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <h2>About</h2>
+      <p>Alex Rivera captures everyday poetry — from misty coastlines to neon streets. Work featured in National Geographic, Cereal and Kinfolk. Print sales support ocean conservation.</p>
+    </div>
+    <div class="about-img"></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Tell me about your project" rows="4" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+    <p id="formMsg" class="form-msg"></p>
+  </form>
+</section>
+
+<footer>© 2026 Alex Rivera — All rights reserved</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
